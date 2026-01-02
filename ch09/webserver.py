@@ -40,6 +40,7 @@ while True:
         else:
             file = os.path.split(path)[1]
             path = os.path.split(path)[0]
+        print(f'path: {path}\nfile: {file}')
         print(f'Request:\n{request}')
 
 
@@ -59,7 +60,7 @@ while True:
                         content_type = 'text/html'
                     case '.txt':
                         content_type = 'text/plain'
-                    case _: # default content "Hello, world!"
+                    case _:
                         content_type = 'text/plain'
             except Exception:
                 code = 404

@@ -5,7 +5,8 @@ default_address = 'example.com'
 default_port = 80
 default_path = '/'
 
-if ('-h' in sys.argv[1].lower()):
+argc = len(sys.argv)
+if ((argc > 1) and ('-h' in sys.argv[1].lower())):
     print('\n\nUsage:\npython ./webclient.py [address - default "example.com"] [port - default 80] [path - default "/"]\n\n')
     sys.exit()
 
